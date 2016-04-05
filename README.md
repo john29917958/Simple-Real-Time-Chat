@@ -1,5 +1,5 @@
-# Cat-Feed-Record
+# Simple-Real-Time-Chat
 
-Cat feed record web application.
+A simple real-time chat web application.
 
 a [Sails](http://sailsjs.org) application
