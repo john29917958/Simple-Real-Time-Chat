@@ -1,0 +1,26 @@
+{
+  "name": "Cat-Feed-Record",
+  "description": "a web application for me to record the cat feed history conveniently.",
+  "main": "app.js",
+  "authors": [
+    "john29917958"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/john29917958/Cat-Feed-Record",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.6",
+    "react": "0.14.8",
+    "jquery": "2.2.2",
+    "mocha": "2.4.5",
+    "chai": "3.5.0",
+    "sinon": "1.17.3"
+  }
+}
