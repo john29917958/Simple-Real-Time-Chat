@@ -1,8 +1,27 @@
 <!-- Default home page -->
 <div class="container">
   <h1 class="text-primary">
-    <b>Hellow World!</b>
+    <b>Simple Real Time Chat Room</b>
   </h1>
   <hr>
-  <p>It works!</p>
+  <div id="chat-area">
+    <div class="panel panel-default">
+      <div class="panel-heading">John says:</div>
+      <div class="panel-body">What a wonderful day! :)</div>
+    </div>
+  </div>
 </div>
+<footer id="footer">
+  <div class="container">
+    <form>
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="What do you want to say...">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="submit">
+            <span class="glyphicon glyphicon-comment"></span> Send
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+</footer>
