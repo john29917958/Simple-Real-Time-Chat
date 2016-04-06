@@ -2,7 +2,7 @@
   "name": "Cat-Feed-Record",
   "private": true,
   "version": "0.0.0",
-  "description": "a web application for me to record the cat feed history conveniently.",
+  "description": "a simple real time chat web application.",
   "keywords": [],
   "dependencies": {
     "bower": "1.7.7",
@@ -25,7 +25,8 @@
     "include-all": "~0.1.6",
     "rc": "1.0.1",
     "sails": "~0.12.3",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "sails-mongo": "0.12.0"
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -34,8 +35,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/john29917958/Cat-Feed-Record.git"
+    "url": "git@github.com:john29917958/Simple-Real-Time-Chat.git"
   },
   "author": "john29917958",
-  "license": ""
+  "license": "MIT"
 }

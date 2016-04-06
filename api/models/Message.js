@@ -9,10 +9,14 @@ module.exports = {
 
   attributes: {
 
-  	content: {
+  	user: {
+  		type: 'string'
+  	},
+  	text: {
   		type: 'string'
   	}
   	
   }
+  
 };
 

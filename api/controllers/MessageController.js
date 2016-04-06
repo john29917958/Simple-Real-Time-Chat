@@ -6,6 +6,7 @@
  */
 
 module.exports = {
+	/*
 	find: function (req, res) {
 
 	},
@@ -25,5 +26,6 @@ module.exports = {
 	destroy: function (req, res) {
 		
 	}
+	*/
 };
 
