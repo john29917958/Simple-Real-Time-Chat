@@ -7,16 +7,17 @@
 
 module.exports = {
 
-  attributes: {
+    attributes: {
 
-  	user: {
-  		type: 'string'
-  	},
-  	text: {
-  		type: 'string'
-  	}
-  	
-  }
+        user: {
+            type: 'string'
+        },
+        
+        text: {
+            type: 'string'
+        }
+
+    }
   
 };
 
