@@ -1,9 +1,8 @@
 function appendSingle(message) {
-    $('#chat-area').append('<div class="panel panel-default"><div class="panel-heading">' +
-        message.user +
-        ' says:</div><div class="panel-body">' +
-        message.text +
-        ' </div></div>');
+    ReactDOM.render(
+        <Panel user={ message.user } text={ message.text } />,
+        document.getElementById('chat-area')
+    );
 
     $(document).scrollTop($(document).height());
 }
@@ -34,7 +33,7 @@ syncMessages();
 
 $('#send-button').click(function (e) {
     var text = $('#message-input').val();
-
+    
     if (text) {
         io.socket.get('/message/create', {
             user: 'John',

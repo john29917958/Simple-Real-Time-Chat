@@ -30,8 +30,8 @@ var jsFilesToInject = [
   'js/dependencies/sails.io.js',
 
   '/packages/jquery/dist/jquery.min.js',
-  '/packages/react/react.min.js',
-  '/packages/react/react-dom.min',
+  '/packages/react/react.js',
+  '/packages/react/react-dom.js',
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/**/*.js',
