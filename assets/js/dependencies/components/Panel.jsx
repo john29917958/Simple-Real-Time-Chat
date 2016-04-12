@@ -30,8 +30,28 @@ var Panel = React.createClass({
 });
 
 var CommentList = React.createClass({
+    getInitialState: function () {
+        return {data: []};
+    },
+    refreshComponents: function () {
+        var that = this;
+
+        io.socket.get(this.props.url, function (data) {
+            that.setState({data: data});
+        });
+    },
+    componentDidMount: function () {
+        var that = this;
+
+        this.refreshComponents();
+        
+        io.socket.on(this.props.model, function (e) {
+            that.refreshComponents();
+        });
+
+    },
     render: function () {
-        var comments = this.props.data.map(function (comment) {
+        var comments = this.state.data.map(function (comment) {
             return (
                 <Panel user={ comment.user } text={ comment.text } key={ comment.id } />
             );

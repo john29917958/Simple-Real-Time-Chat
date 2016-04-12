@@ -1,17 +1,9 @@
-function syncMessages() {
-    io.socket.get('/message', function (data) {
-        ReactDOM.render(
-            <CommentList data={data} />,
-            document.getElementById('chat-area')
-        );
-    });
+function RenderDOM() {
+    ReactDOM.render(
+        <CommentList url='/message' model='message' />,
+        document.getElementById('chat-area')
+    );
 }
-
-io.socket.on('message', function (e) {
-    syncMessages();
-});
-
-syncMessages();
 
 $('#send-button').click(function (e) {
     var text = $('#message-input').val();
@@ -20,9 +12,6 @@ $('#send-button').click(function (e) {
         io.socket.get('/message/create', {
             user: 'John',
             text: text
-        }, function (resData, jwres) {
-            syncMessages();
-            $('#message-input').val('');
         });
     }
 });
