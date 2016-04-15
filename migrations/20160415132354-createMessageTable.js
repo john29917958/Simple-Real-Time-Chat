@@ -15,9 +15,15 @@ exports.setup = function(options, seedLink) {
 };
 
 exports.up = function(db) {
-  return null;
+  db.createTable('messages', {
+    id: { type: 'int', primaryKey: true},
+    user: 'string',
+    text: 'string',
+    createdAt: 'datetime',
+    updatedAt: 'datetime'
+  })
 };
 
 exports.down = function(db) {
-  return null;
+  db.dropTable('messages');
 };
