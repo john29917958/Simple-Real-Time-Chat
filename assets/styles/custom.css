@@ -1,5 +1,6 @@
 #footer {
 	position: fixed;
+	left: 0;
 	bottom: 0;
 	width: 100%;
 	padding-top: 30px;
@@ -8,5 +9,5 @@
 }
 
 .body {
-	padding-bottom: 100px;
+	padding-bottom: 150px;
 }
