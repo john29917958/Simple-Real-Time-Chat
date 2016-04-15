@@ -49,6 +49,7 @@ var CommentList = React.createClass({
             that.refreshComponents();
         });
 
+        var interval = setInterval(this.refreshComponents, this.props.pollInterval);
     },
     render: function () {
         var comments = this.state.data.map(function (comment) {

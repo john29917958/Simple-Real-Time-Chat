@@ -1,9 +1,7 @@
-function RenderDOM() {
-    ReactDOM.render(
-        <CommentList url='/message' model='message' />,
-        document.getElementById('chat-area')
-    );
-}
+ReactDOM.render(
+    <CommentList url='/message' model='message' pollInterval={2000}/>,
+    document.getElementById('chat-area')
+);
 
 $('#send-button').click(function (e) {
     var text = $('#message-input').val();
@@ -12,6 +10,8 @@ $('#send-button').click(function (e) {
         io.socket.get('/message/create', {
             user: 'John',
             text: text
+        }, function (resData, jwres) {
+            $('#message-input').val('');
         });
     }
 });
