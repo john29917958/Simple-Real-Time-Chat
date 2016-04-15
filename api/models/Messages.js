@@ -8,14 +8,25 @@
 module.exports = {
 
     attributes: {
-
+        
+    	id: {
+    		type: 'int',
+    		primaryKey: true,
+    		unique: true,
+            autoIncrement: true
+    	},
+        
         user: {
             type: 'string'
         },
         
         text: {
             type: 'string'
-        }
+        },
+
+        autoCreatedAt: true,
+
+        autoUpdatedAt: true
 
     }
   

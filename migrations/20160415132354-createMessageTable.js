@@ -16,12 +16,19 @@ exports.setup = function(options, seedLink) {
 
 exports.up = function(db) {
   db.createTable('messages', {
-    id: { type: 'int', primaryKey: true},
+    id: {
+      type: 'int',
+      primaryKey: true,
+      autoIncrement: true,
+      unsigned: true,
+      length: 10,
+      notNull: true
+    },
     user: 'string',
     text: 'string',
     createdAt: 'datetime',
     updatedAt: 'datetime'
-  })
+  });
 };
 
 exports.down = function(db) {

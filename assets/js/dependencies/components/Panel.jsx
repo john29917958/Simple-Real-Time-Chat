@@ -68,7 +68,7 @@ var CommentBox = (function() {
         return;
       }
 
-      io.socket.get('/message/create', {
+      io.socket.get(this.props.url + '/create', {
         user: user,
         text: text
       }, function (resData, jwres) {
@@ -146,7 +146,7 @@ var CommentBox = (function() {
       return (
         <div>
           <CommentList data={this.state.data} />
-          <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+          <CommentForm onCommentSubmit={this.handleCommentSubmit} url={ this.props.url } />
         </div>
       );
     }
