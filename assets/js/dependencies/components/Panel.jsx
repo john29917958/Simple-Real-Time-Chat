@@ -1,3 +1,5 @@
+'use strict';
+
 var CommentBox = (function() {
   var PanelHead = React.createClass({
     render: function() {

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Entrance of program.
  */
